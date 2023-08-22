@@ -85,7 +85,7 @@ export default function Tateti() {
         >
           <Mensaje>Ganador {ganador}</Mensaje>
 
-          <button style={{ border:"none",outline:"none", background:"transparent", padding:".5rem .5rem", border:"1px solid white", borderRadius:"12px", color:"white", textTransform:"uppercase",fontWeight:"bold"}}onClick={resetearJuego}>Jugar de nuevo</button>
+          <button  className="play-again" onClick={resetearJuego}>Jugar de nuevo</button>
         </div>
       )}
 

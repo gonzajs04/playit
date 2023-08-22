@@ -95,3 +95,24 @@
 .cuadrado:is(:hover){
     cursor: pointer;
 }
+
+.play-again{
+    color: white;
+    transition: .5s all ease-in-out;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: .5rem .5rem;
+    border: 1px solid white;
+    border-radius: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.play-again:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    
+
+}
