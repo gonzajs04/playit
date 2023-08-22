@@ -1,0 +1,96 @@
+.container-juegos{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 60%;
+    @media(min-width: 1368px){
+        flex-direction: row;
+    }
+   
+}
+.container-juego{
+    margin: 4rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.imagen-juego{
+    max-height: 100%;
+    
+}
+
+@media(min-width: 1368px){
+    .imagen-juego{
+        max-height: 242px;
+    }
+}
+.imagen-juego img{
+    height: 100%;
+
+    
+}
+.titulo-juego{
+    font-size: 2rem;
+    color: var(--violetColor);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    margin: 3rem 0;
+}
+
+.consigna
+{
+    font-size: 2rem;
+    color: var(--verde);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+.game{
+    display: grid;
+    place-items: center;
+    height: 100%;
+    background-color:black;
+}
+
+.input-word{
+    height: 100%;
+
+
+}
+
+.input-word input{
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.contenido-tateti{
+    display: grid;
+    place-items: center;
+    width: 50%;
+}
+.contenido-tateti .buttonLink{
+    margin: 2rem 0;
+}
+
+.turnos{
+    display: flex;
+    align-items: center;
+}
+.turnos-p{
+    padding: .5rem 1rem;
+    color: var(--verde);
+    font-size: 2rem;
+    margin: 0 2rem;
+}
+.active{
+    background-color: var(--violetColor)
+
+}
+.cuadrado:is(:hover){
+    cursor: pointer;
+}

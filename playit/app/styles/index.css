@@ -1,0 +1,142 @@
+:root{
+    --darkBlue:#08090e;
+    --verde : rgb(32, 156, 32);
+
+    --violetColor:   rgb(132, 39, 169);
+}
+
+html{
+    background-color: var(--darkBlue);
+    height: 100vh;
+}
+body{
+    font-family: 'Share Tech', sans-serif;
+    height: 100%;
+
+}
+h1{
+    font-weight: 400;
+}
+
+.contenedor{
+    width: min(95%, 120rem);
+    margin: 3rem auto;
+    height: 100%;
+ 
+}
+
+.centrado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+    color: var(--verde);
+    margin: 3rem 0;
+    @media(min-width: 1368px){
+        font-size: 3.5rem;
+    }
+
+    
+
+}
+
+.title::after{
+    content: '';
+    border-right: 2px solid var(--violetColor);
+    animation: titilar 1.5s linear infinite;
+}
+
+.buttonLink{
+    color: var(--verde);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--verde);
+    transition: .5s all ease-in-out;
+}
+.buttonLink:hover{
+    background-color: var(--verde);
+    color: white;
+    border-color: rgb(0, 93, 6);
+}
+
+.index{
+    background-color: rgba(0, 0, 0, 0.272);
+   border: 1px solid var(--verde);
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+
+  
+}
+.imagen-index{
+    position: relative;
+    z-index: 10;
+    padding: 13rem 0;
+    background-color: rgba(1, 0, 4, 0.149);
+    width: 700px;
+}
+.container-index{
+    position: relative;
+    padding: 13rem 10rem;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+.emoji{
+    position: absolute;
+    animation: mover 5s linear infinite;
+}
+@keyframes titilar {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1
+        ;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes mover {
+    0%{
+        right: 100%;
+    }
+    50%{
+        right: 40%;
+    }
+    100%{
+        right: -50%;
+        
+    }
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+.simple-text{
+    color: var(--violetColor);
+    font-size: 1.4rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.container-arrow{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 30px;
+}
