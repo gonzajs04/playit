@@ -1,6 +1,5 @@
 import {Meta,Links,Outlet,Scripts,LiveReload} from '@remix-run/react';
 import styles from './styles/index.css'
-import joystick from '../public/img/joystick.png'
 
 export function meta(){
   return[
@@ -8,14 +7,18 @@ export function meta(){
     { charset: "utf-8" },
     { viewport: "width=device-width, initial-scale=1" },
     {description:"Juega y disfruta los mejores juegos"},
-   
+
    
   ]
 }
 export function links(){
   return[
     {rel:"stylesheet",href:styles},
-    {rel:"stylesheet", href: "https://necolas.github.io/normalize.css/8.0.1/normalize.css"}
+    {rel:"stylesheet", href: "https://necolas.github.io/normalize.css/8.0.1/normalize.css"},
+    {rel:"preconnect", href:"https://fonts.googleapis.com"},
+    {rel:"preconnect", href:"https://fonts.gstatic.com", crossOrigin:"true"},
+    {rel:"stylesheet", href: "https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"}
+    
   ]
 }
 

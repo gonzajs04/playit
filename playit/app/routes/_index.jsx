@@ -14,7 +14,7 @@ export default function Index() {
 
         <div className="imagen-index">
         <picture>
-          <img src={joystick} alt="Imagen Joystick" />
+          <img loading="lazy" src={joystick} alt="Imagen Joystick" />
         </picture>
         </div>
       </div>

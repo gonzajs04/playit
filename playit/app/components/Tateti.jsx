@@ -1,7 +1,7 @@
-import { Link } from "@remix-run/react";
 import { useState } from "react";
 import Cuadrado from "./Cuadrado";
 import Mensaje from "./Mensaje";
+import Volver from './Volver'
 export default function Tateti() {
   const [tabla, setTabla] = useState(Array(9).fill(null));
   const [turno, setTurno] = useState("X");
@@ -11,7 +11,7 @@ export default function Tateti() {
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
-    [0, 5, 8],
+    [0, 4, 8],
     [2, 4, 6],
     [0, 3, 6],
     [1, 4, 7],
@@ -62,27 +62,11 @@ export default function Tateti() {
 
   return (
     <div className="game">
-      
+      <Volver>/juegos</Volver>
 
       {ganador && (
         <div
-          className="container-mensaje"
-          style={{
-            color: "white",
-            padding: "10rem 8rem",
-            background: "#100F10",
-            border: "2px solid green",
-            position: "relative",
-            top: "30%",
-            opacity: ".8",
-            borderRadius: "20px",
-            textTransform: "uppercase",
-            fontWeight: "800",
-            textAlign: "center",
-            margin: "0",
-          }}
-       
-        >
+          className="container-mensaje">
           <Mensaje>Ganador {ganador}</Mensaje>
 
           <button  className="play-again" onClick={resetearJuego}>Jugar de nuevo</button>
@@ -107,18 +91,18 @@ export default function Tateti() {
           ))}
         </div>
 
-        <Link to={"/juegos"} className="buttonLink">
-          Volver
-        </Link>
+     
         <p style={{ color: "white" }}>Turno de</p>
         <div className="turnos">
-          <p className={`turnos-p ${turno == TURNOS.X && "active"}`}>
-            {TURNOS.X}
-          </p>
-          <p className={`turnos-p ${turno == TURNOS.O && "active"}`}>
-            {TURNOS.O}
-          </p>
+            <p className={`turnos-p ${turno == TURNOS.X && "active"}`}>
+              {TURNOS.X}
+            </p>
+            <p className={`turnos-p ${turno == TURNOS.O && "active"}`}>
+              {TURNOS.O}
+            </p>
         </div>
+        <button  className="play-again" onClick={resetearJuego}>Jugar de nuevo</button>
+
       </div>
     </div>
   );
