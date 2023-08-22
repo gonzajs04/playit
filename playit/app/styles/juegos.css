@@ -49,6 +49,7 @@
     letter-spacing: 4px;
 }
 .game{
+    position: relative;
     display: grid;
     place-items: center;
     height: 100%;
