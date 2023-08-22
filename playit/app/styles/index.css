@@ -8,11 +8,13 @@
 html{
     background-color: var(--darkBlue);
     height: 100vh;
+    
 }
 body{
     font-family: 'Share Tech Mono', monospace;
 
     height: 100%;
+
 
 }
 h1{
@@ -137,6 +139,11 @@ img{
     width: 30px;
 }
 
+
+.container-img{
+    margin: 0 auto;
+    width: 400px;
+}
 
 /*ANIMACIONES*/
 
