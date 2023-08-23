@@ -9,6 +9,7 @@ import {
 import styles from "./styles/index.css";
 import Mensaje from "./components/Mensaje";
 import errorImg from "../public/img/error.png";
+import errorImgw from "../public/img/compressed/errorw.webp";
 
 export function meta() {
   return [
@@ -70,6 +71,7 @@ export function ErrorBoundary() {
       <Document>
         <div className="container-img">
           <picture>
+            <source srcSet={errorImgw}  type="image/webp"/>
             <img loading="lazy" src={errorImg} alt="Error img" />
           </picture>
         </div>
@@ -84,7 +86,7 @@ export function ErrorBoundary() {
             }}
           >
        
-            La Pagina no encontrada
+            La Pagina buscada no existe
           </p>
           <p
             style={{

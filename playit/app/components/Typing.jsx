@@ -6,9 +6,6 @@ import Volver from './Volver'
 import { useEffect, useState } from "react";
 
 export default function Typing({ data }) {
-
-  
-
   const [words, setWords] = useState(data[1]);
   const [currentWordPosition, setCurrentWordPosition] = useState(0);
   const [lastWord, setLastWord] = useState("");

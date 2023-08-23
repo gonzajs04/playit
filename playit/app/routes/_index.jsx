@@ -1,5 +1,6 @@
 import { Link } from "@remix-run/react";
 import joystick from "../../public/img/joystick.png";
+import joystickw from "../../public/img/compressed/joystickw.webp";
 export default function Index() {
   return (
     <div className="contenedor centrado">
@@ -14,6 +15,7 @@ export default function Index() {
 
         <div className="imagen-index">
         <picture>
+          <source srcSet={joystickw} type="image/webp" />
           <img loading="lazy" src={joystick} alt="Imagen Joystick" />
         </picture>
         </div>

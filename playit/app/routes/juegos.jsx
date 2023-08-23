@@ -4,6 +4,8 @@ import Juego from "../components/Juego";
 import Volver from '../components/Volver'
 import typing from '../../public/img/typing.png'
 import tateti from '../../public/img/tateti.png'
+import typingw from '../../public/img/compressed/typingw.webp'
+import tatetiw from '../../public/img/compressed/tatetiw.webp'
 
 
 export function meta() {
@@ -17,8 +19,8 @@ export function links() {
 
 export default function Juegos() {
   const [juegos, setJuegos] = useState([
-    { id: 1, nombre: "Typing", abreviacion: "TY", url: "typing", img: typing },
-    { id: 2, nombre: "Ta-te-ti", abreviacion: "TA", url: "tateti", img: tateti },
+    { id: 1, nombre: "Typing", abreviacion: "TY", url: "typing", img: typing,imgw:typingw },
+    { id: 2, nombre: "Ta-te-ti", abreviacion: "TA", url: "tateti", img: tateti, imgw:tatetiw },
   ]);
   return (
     <div className="contenedor centrado">

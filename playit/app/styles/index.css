@@ -75,39 +75,77 @@ h1{
     color: var(--verde);
     text-decoration: none;
     font-weight: 600;
-    padding: 1rem 1.5rem;
+    padding: .8rem 1.5rem;
     border: 2px solid var(--verde);
     transition: .5s all ease-in-out;
+    border-radius: 4px;
+    position: relative;
+    background-color: var(--darkBlue);
+    animation: buttonLinkAnimation 12s linear infinite;
 }
-.buttonLink:hover{
-    background-color: var(--verde);
-    color: white;
-    border-color: rgb(0, 93, 6);
+
+.buttonLink::before{
+    content: '';
+    position: absolute;
+
+    filter: blur(5px);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-clip: padding-box;
+    width: 100%;
+    z-index: -1;
+    animation: shadowAnimation 12s linear infinite ;
 }
+
+
 
 .index{
     background-color: rgba(0, 0, 0, 0.272);
    border: 1px solid var(--verde);
     width: fit-content;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+   
   
 
   
 }
+
+@media(min-width:1200px){
+.index{
+
+    grid-template-columns: 1fr 1fr;
+}
+}
 .imagen-index{
     position: relative;
     z-index: 10;
-    padding: 13rem 0;
+    padding: 5rem 0;
     background-color: rgba(1, 0, 4, 0.149);
-    width: 700px;
+    width: 500px;
+   
+}
+@media(min-width:1200px){
+    .imagen-index{
+        width: 700px;
+        padding: 13rem 0;
+
+    }
 }
 .container-index{
     position: relative;
-    padding: 13rem 10rem;
+    padding: 5rem 10rem;
     display: grid;
     place-items: center;
     overflow: hidden;
+}
+
+@media(min-width:1200px){
+    .container-index{
+        width: 700px;
+        padding: 13rem 0;
+
+    }
 }
 .container-index .title{
     width: 7ch;
@@ -115,7 +153,7 @@ h1{
 }
 .emoji{
     position: absolute;
-    animation: mover 5s linear infinite;
+    animation: mover 5s ease-in infinite;
 }
 
 
@@ -175,5 +213,62 @@ img{
 @keyframes escribir {
     from{
         width: 0;
+    }
+}
+
+@keyframes buttonLinkAnimation {
+    0%{
+        border-color: var(--verde);
+        color: var(--verde); ;
+    }
+    10%{
+        border-color: #35e735;
+        color: #35e735;
+    }
+    30%{
+        border-color: rgb(84,38,38);
+        color: rgb(84,38,38);
+    }
+    50%{
+        border-color: rgb(177, 6, 177);
+        color: rgb(177, 6, 177);
+    }
+    70%{
+        border-color:rgb(35, 29, 204);
+        color: rgb(35, 29, 204);
+    }
+    100%{
+        border-color: var(--verde);
+        color: var(--verde); ;
+    }
+}
+@keyframes shadowAnimation {
+    0%{
+        background: var(--verde);
+        background-image: linear-gradient(200deg, rgba(38,84,41,1) 0%, rgba(14,134,3,1) 90%); 
+
+    }
+    10%{
+        background: var(--verde);
+        background-image: linear-gradient(180deg, rgb(25, 215, 38) 0%, rgba(14,134,3,1) 90%); 
+    }
+    30%{
+      
+        background: rgb(84,38,38);
+        background: linear-gradient(150deg, rgba(84,38,38,1) 0%, rgba(134,3,131,1) 90%);
+    }
+    50%{
+        background: rgb(166,54,209);
+        background: linear-gradient(50deg, rgba(166,54,209,1) 0%, rgba(134,3,131,1) 90%);
+    }
+    70%{
+        background: rgb(35, 29, 204);
+        background: linear-gradient(10deg, rgba(59,54,209,1) 0%, rgba(102,3,134,1) 90%);
+    }
+    100%{
+        background: var(--verde);
+
+        background-image: linear-gradient(355deg, rgba(38,84,41,1) 0%, rgba(14,134,3,1) 90%); 
+
     }
 }
