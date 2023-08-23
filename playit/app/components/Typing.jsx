@@ -1,5 +1,3 @@
-import { Link } from "@remix-run/react";
-import { timer } from "../helpers/helpers";
 import Mensaje from './Mensaje'
 import Volver from './Volver'
 
@@ -32,9 +30,11 @@ export default function Typing({ data }) {
 
 
   return (
+
     <div className="game">
-    {currentWordPosition === data[1].length &&(
    
+    {currentWordPosition === data[1].length &&(
+       
        <div className="container-mensaje" style={{position:"absolute"}}>
        
         <Mensaje>GANASTE! Juega de nuevo si los deseas</Mensaje>
@@ -42,6 +42,7 @@ export default function Typing({ data }) {
         <button  className="play-again" onClick={resetearJuego}>Jugar de nuevo</button>
 
       </div>
+
     )}
 
       <div className="input-word" >
@@ -70,6 +71,8 @@ export default function Typing({ data }) {
       </div>
 
         <Volver>/juegos</Volver>
+    
     </div>
+
   );
 }

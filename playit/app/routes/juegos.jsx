@@ -1,5 +1,6 @@
 import styles from "../styles/juegos.css";
 import { useState } from "react";
+import { Suspense } from "react";
 import Juego from "../components/Juego";
 import Volver from '../components/Volver'
 import typing from '../../public/img/typing.png'
@@ -26,7 +27,9 @@ export default function Juegos() {
     { id: 1, nombre: "Typing", abreviacion: "TY", url: "typing", img: typing,imgw:typingw },
     { id: 2, nombre: "Ta-te-ti", abreviacion: "TA", url: "tateti", img: tateti, imgw:tatetiw },
   ]);
+
   return (
+    <Suspense fallback={"Cargando"}>
     <div className="contenedor centrado">
 
       <div className="games">
@@ -43,5 +46,6 @@ export default function Juegos() {
       <Volver>/</Volver>
       </div>
     </div>
+    </Suspense>
   );
 }

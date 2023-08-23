@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Cuadrado from "./Cuadrado";
 import Mensaje from "./Mensaje";
-import Volver from './Volver'
+import Volver from './Volver';
 export default function Tateti() {
   const [tabla, setTabla] = useState(Array(9).fill(null));
   const [turno, setTurno] = useState("X");
