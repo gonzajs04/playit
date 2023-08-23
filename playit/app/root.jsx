@@ -12,7 +12,6 @@ import Volver from "./components/Volver";
 import errorImg from "../public/img/error.png";
 import errorImgw from "../public/img/compressed/errorw.webp";
 import ico from '../public/img/ico/joystick.ico'
-import { Suspense } from "react";
 
 export function meta() {
   return [
@@ -51,11 +50,11 @@ export function links() {
 
 export default function App() {
   return (
-    <Suspense fallback={"Cargando"}>
+ 
       <Document>
         <Outlet />
       </Document>
-    </Suspense>
+    
   );
 }
 
