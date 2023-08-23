@@ -8,6 +8,7 @@ import {
 } from "@remix-run/react";
 import styles from "./styles/index.css";
 import Mensaje from "./components/Mensaje";
+import Volver from "./components/Volver";
 import errorImg from "../public/img/error.png";
 import errorImgw from "../public/img/compressed/errorw.webp";
 import ico from '../public/img/ico/joystick.ico'
@@ -75,6 +76,8 @@ export function ErrorBoundary() {
   if (error) {
     return (
       <Document>
+
+        <Volver>/</Volver>
         <div className="container-img">
           <picture>
             <source srcSet={errorImgw}  type="image/webp"/>
