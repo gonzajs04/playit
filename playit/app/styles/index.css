@@ -79,7 +79,7 @@ h1{
     border: 2px solid var(--verde);
     transition: .5s all ease-in-out;
     border-radius: 4px;
-    font-size: .86rem;
+    font-size: 1rem !important;
     position: relative;
     background-color: var(--darkBlue);
     animation: buttonLinkAnimation 12s linear infinite;

@@ -17,9 +17,6 @@
 
 }
 
-
-
-
 @media(min-width: 1000px){
     .container-juego{
         margin: 1rem 2rem;
@@ -39,6 +36,8 @@
     .imagen-juego{
         min-width: 500px;
         max-width: 500px;
+        max-height: 300px;
+        min-height: 300px;
     }
 }
 .imagen-juego img{
@@ -48,12 +47,13 @@
     
 }
 .titulo-juego{
-    font-size: 2rem;
+    font-size: 2.5rem;
+   
     color: var(--violetColor);
     text-transform: uppercase;
     text-align: center;
     font-weight: 700;
-    margin: 1.4rem 0;
+    margin: 2rem 0;
 }
 
 .consigna
