@@ -5,7 +5,6 @@ import styles from "../styles/juegos.css";
 import { ABR } from '../helpers/helpers.js'
 import Typing from "../components/Typing.jsx";
 import Tateti from "../components/Tateti.jsx";
-import { useEffect } from "react";
 
 export async function loader({ params }) {
     const words = await getPalabras();
