@@ -6,6 +6,16 @@ import { ABR } from '../helpers/helpers.js'
 import Typing from "../components/Typing.jsx";
 import Tateti from "../components/Tateti.jsx";
 
+export function meta({params}) {
+
+    return [
+      { title: `PlayIT -  ${params.juegoAbreviacion}` },
+      { name:"description", content: "Ponte a prueba con estos juegos" },
+      { viewport: "width=device-width, initial-scale=1" },
+    ];
+  }
+
+
 export async function loader({ params }) {
     const words = await getPalabras();
     const ABREVIACION = params;

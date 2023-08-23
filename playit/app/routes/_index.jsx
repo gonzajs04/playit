@@ -1,8 +1,18 @@
 import { Link } from "@remix-run/react";
 import joystick from "../../public/img/joystick.png";
 import joystickw from "../../public/img/compressed/joystickw.webp";
+
+export function meta() {
+  return [
+    { title: "PlayIT - Inicio" },
+    { name:"description", content: "Ponte a prueba con estos juegos" },
+    { viewport: "width=device-width, initial-scale=1" },
+  ];
+}
+
 export default function Index() {
  
+  
   return (
     <div className="contenedor centrado">
       <div className="index">

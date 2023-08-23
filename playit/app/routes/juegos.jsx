@@ -9,7 +9,11 @@ import tatetiw from '../../public/img/compressed/tatetiw.webp'
 
 
 export function meta() {
-  return [{ title: "PlayIT - Selecciona un juego" }];
+  return [
+    { title: "PlayIT - Juegos" },
+    { name:"description", content: "Ponte a prueba con estos juegos" },
+    { viewport: "width=device-width, initial-scale=1" },
+  ];
 }
 export function links() {
   return [{ rel: "stylesheet", href: styles }];

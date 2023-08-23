@@ -18,7 +18,9 @@ export function meta() {
     { title: "PlayIT - Juega y disfruta" },
     { charset: "utf-8" },
     { viewport: "width=device-width, initial-scale=1" },
-    { description: "Ponte a prueba con estos juegos" },
+    { name:"description", content: "Ponte a prueba con estos juegos" },
+    { name:"viewport"
+    }
   ];
 }
 export function links() {
