@@ -2,6 +2,7 @@ import { Link } from "@remix-run/react";
 import joystick from "../../public/img/joystick.png";
 import joystickw from "../../public/img/compressed/joystickw.webp";
 export default function Index() {
+ 
   return (
     <div className="contenedor centrado">
       <div className="index">

@@ -10,17 +10,23 @@ import styles from "./styles/index.css";
 import Mensaje from "./components/Mensaje";
 import errorImg from "../public/img/error.png";
 import errorImgw from "../public/img/compressed/errorw.webp";
+import ico from '../public/img/ico/joystick.ico'
 
 export function meta() {
   return [
     { title: "PlayIT - Juega y disfruta" },
     { charset: "utf-8" },
     { viewport: "width=device-width, initial-scale=1" },
-    { description: "Juega y disfruta los mejores juegos" },
+    { description: "Ponte a prueba con estos juegos" },
   ];
 }
 export function links() {
   return [
+     {rel: 'icon',
+      type: 'image/png',
+      sizes: '16x16',
+      href: ico,
+      },
     { rel: "stylesheet", href: styles },
     {
       rel: "stylesheet",
