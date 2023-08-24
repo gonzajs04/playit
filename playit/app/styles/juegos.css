@@ -143,10 +143,16 @@
 .contenido-tateti{
     display: grid;
     place-items: center;
-    width: 50%;
+    width: 100%;
 }
+
 .contenido-tateti .buttonLink{
     margin: 2rem 0;
+}
+@media(min-width:500px){
+    .contenido-tateti{
+        width: 50%;
+    }
 }
 
 .turnos{

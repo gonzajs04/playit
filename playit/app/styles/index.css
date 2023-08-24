@@ -201,6 +201,7 @@ img{
 }
 
 .container-arrow{
+    z-index: 100;
     position: absolute;
     top: 5%;
     left: 5%;
