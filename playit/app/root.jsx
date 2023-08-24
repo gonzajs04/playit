@@ -7,20 +7,20 @@ import {
   useRouteError,
 } from "@remix-run/react";
 import styles from "./styles/index.css";
+import normalize from './styles/normalize.css'
 import Mensaje from "./components/Mensaje";
 import Volver from "./components/Volver";
 import errorImg from "../public/img/error.png";
 import errorImgw from "../public/img/compressed/errorw.webp";
 import ico from '../public/img/ico/joystick.ico'
 
+
 export function meta() {
   return [
     { title: "PlayIT - Juega y disfruta" },
-    { charset: "utf-8" },
-    { viewport: "width=device-width, initial-scale=1" },
+
     { name:"description", content: "Ponte a prueba con estos juegos" },
-    { name:"viewport"
-    }
+
   ];
 }
 export function links() {
@@ -33,7 +33,7 @@ export function links() {
     { rel: "stylesheet", href: styles },
     {
       rel: "stylesheet",
-      href: "https://necolas.github.io/normalize.css/8.0.1/normalize.css",
+      href:normalize,
     },
     { rel: "preconnect", href: "https://fonts.googleapis.com" },
     {
@@ -45,9 +45,22 @@ export function links() {
       rel: "stylesheet",
       href: "https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap",
     },
+    
+
   ];
 }
 
+
+export function Head(){
+  return(
+    <head>
+      <meta charSet="utf-8" /> {/*RECOMENDED BY REMIX RUN */}
+        <meta name="viewport" content="width=device-width,initial-scale=1"/> {/*RECOMENDED BY REMIX RUN */}
+        <Meta />
+        <Links />
+    </head>
+  )
+}
 export default function App() {
   return (
  
@@ -61,15 +74,15 @@ export default function App() {
 function Document({ children }) {
   return (
     <html lang="es">
-      <head>
-        <Meta />
-        <Links />
-      </head>
+      <Head/>
+
       <body>
         {children}
         <LiveReload></LiveReload>
         <Scripts />
+
       </body>
+
     </html>
   );
 }

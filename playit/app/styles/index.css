@@ -274,3 +274,25 @@ img{
 
     }
 }
+
+.contenedor{
+    view-transition-name:page;
+}
+
+::view-transition-old(page){
+    animation: fade .2s linear forwards;
+}
+::view-transition-new(page){
+    animation: fade .3s linear reverse
+}
+
+@keyframes fade {
+    0%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}

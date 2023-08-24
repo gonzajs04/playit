@@ -17,7 +17,9 @@
     "isbot": "^3.6.8",
     "npm": "^9.8.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-lazy-load-image-component": "^1.6.0",
+    "remix-utils": "^6.6.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.19.3",

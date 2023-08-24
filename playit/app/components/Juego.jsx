@@ -1,12 +1,16 @@
 
 import { Link } from "@remix-run/react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 export default function Juego({juego}){
     return(
         <div className="container-juego">
             <div className="imagen-juego">
                 <picture>
                   <source srcSet={juego.imgw} type="image/webp" />
-                  <img loading="lazy" src={juego.img} alt={`imagen juego ${juego.nombre}`} />
+                  <LazyLoadImage src={juego.img} alt={`Imagen del juego ${juego.nombre}`}/>
+
+              
                 </picture>
               </div>
             <div className="titulo-juego">{juego.nombre}</div>
