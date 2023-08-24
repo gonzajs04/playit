@@ -13,7 +13,6 @@ export function meta() {
   return [
     { title: "PlayIT - Juegos" },
     { name:"description", content: "Ponte a prueba con estos juegos" },
-    { viewport: "width=device-width, initial-scale=1" },
   ];
 }
 export function links() {
@@ -34,8 +33,10 @@ export default function Juegos() {
 
       <div className="games">
 
-   
-      <h1 className="title title-game">Seleccione juego para empezar</h1>
+    <div className="container-title-game">
+    <h1 className="title title-game">Seleccione juego para empezar</h1>
+    </div>
+
       <div className="container-juegos">
         {juegos.map((juego) => (
           <Juego juego={juego} key={juego.id} />

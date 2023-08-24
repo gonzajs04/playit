@@ -44,25 +44,35 @@ h1{
     text-align: center;
     color: var(--verde);
     margin: 3rem 0;
-    white-space: nowrap;
-
+    max-width: 360px;
+    white-space: normal;
     overflow: hidden;
-    @media(min-width: 1368px){
-        font-size: 3.5rem;
+
+    @media(min-width: 200px){
+        font-size: 1rem;
+        max-width: 260px;
+
+
     }
+    @media(min-width: 700px){
+        font-size:2rem;
+        max-width: 100%;
+        white-space: nowrap;
+
+    }
+    @media(min-width: 1300px){
+        font-size: 3.5rem;
+        max-width: 100%;
+        white-space: nowrap;
+
+    }
+
+   
 
     
 
 }
-.games{
-    display: grid;
-    place-items: center;
-    width: 100%;
-}
-.games .title{
-    width: 38ch;
-    animation: escribir 2s steps(38);
-}
+
 
 
 .title::after{
@@ -75,15 +85,24 @@ h1{
     color: var(--verde);
     text-decoration: none;
     font-weight: 600;
-    padding: .8rem 1.5rem;
+    padding: .6rem 1rem;
     border: 2px solid var(--verde);
     transition: .5s all ease-in-out;
     border-radius: 4px;
-    font-size: 1rem !important;
+    font-size: .7rem !important;
     position: relative;
     background-color: var(--darkBlue);
     animation: buttonLinkAnimation 12s linear infinite;
     text-transform: uppercase;
+}
+
+
+@media(min-width:700px){
+    .buttonLink{
+        font-size: 1rem !important;
+        padding: .8rem 1.5rem;
+
+    }
 }
 
 .buttonLink::before{
@@ -123,20 +142,21 @@ h1{
     position: relative;
     z-index: 10;
     padding: 5rem 0;
-    background-color: rgba(1, 0, 4, 0.149);
-    width: 500px;
+    margin: 0 auto;
+    width: 200px;
    
 }
 @media(min-width:1200px){
     .imagen-index{
         width: 700px;
         padding: 13rem 0;
+        background-color: rgba(1, 0, 4, 0.149);
 
     }
 }
 .container-index{
     position: relative;
-    padding: 5rem 10rem;
+    padding: 5rem 5rem;
     display: grid;
     place-items: center;
     overflow: hidden;
@@ -154,10 +174,18 @@ h1{
     animation: escribir 1s steps(6);
 }
 .emoji{
+    font-size: .7rem;
+  
+    top: 47%;
     position: absolute;
     animation: mover 5s ease-in infinite;
 }
 
+@media(min-width:560px){
+   .emoji{
+
+  font-size: 1rem;   }
+}
 
 img{
     display: block;

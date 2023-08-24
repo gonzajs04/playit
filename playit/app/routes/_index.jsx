@@ -8,7 +8,6 @@ export function meta() {
   return [
     { title: "PlayIT - Inicio" },
     { name: "description", content: "Ponte a prueba con estos juegos" },
-    { viewport: "width=device-width, initial-scale=1" },
   ];
 }
 

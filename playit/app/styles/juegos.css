@@ -2,7 +2,10 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    max-width: 60%;
+    max-width: 100%;
+    @media(min-width: 500px){
+        max-width: 60%;
+    }
     @media(min-width: 1368px){
         flex-direction: row;
     }
@@ -23,6 +26,19 @@
     }
 }
 
+.container-title-game{
+    width: 100%;
+  
+}
+
+.games .title{
+
+    width: 38ch;
+    margin: 0rem auto;
+    margin-bottom: 2rem;
+    animation: escribir 8s steps(38);
+
+}
 .imagen-juego{
 
     width: 100%;
@@ -31,6 +47,13 @@
    
 
 }
+
+.games{
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+
 
 @media(min-width: 1368px){
     .imagen-juego{
@@ -47,7 +70,7 @@
     
 }
 .titulo-juego{
-    font-size: 2.5rem;
+    font-size: 1.5rem;
    
     color: var(--violetColor);
     text-transform: uppercase;
@@ -56,13 +79,27 @@
     margin: 2rem 0;
 }
 
+@media(min-width:700px){
+    .titulo-juego{
+        font-size: 2.5rem;
+    }
+}
+
 .consigna
 {
-    font-size: 2rem;
+    font-size: 1.4rem;
     color: var(--verde);
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 4px;
+    text-align: center;
+}
+
+@media(min-width:500px){
+    .consigna{
+        font-size: 2rem;
+    
+    }
 }
 .game{
     position: relative;
@@ -77,9 +114,25 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    padding: 0 2rem;
 }
 
+@media(min-width:500px){
+    .input-word{
+        padding: 0;
+    
+    }
+}
+.cant-palabras p{
+    margin: 1rem 0;
+}
+
+@media(min-width:500px){
+    .cant-palabras p{
+        margin: 0;
+    
+    }
+}
 .input-word input{
     width: 100%;
     text-transform: uppercase;
