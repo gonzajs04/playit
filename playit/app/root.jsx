@@ -50,9 +50,11 @@ export function links() {
 
 export default function App() {
   return (
-    <Document>
-      <Outlet />
-    </Document>
+ 
+      <Document>
+        <Outlet />
+      </Document>
+    
   );
 }
 
